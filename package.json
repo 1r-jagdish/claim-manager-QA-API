@@ -1,0 +1,17 @@
+{
+  "name": "claim-manager-v2-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Claim Manager v2 API — Node.js/Express service for managing insurance claims",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
