@@ -11,7 +11,9 @@ let baseUrl;
 test.before(async () => {
   const app = createApp();
   await new Promise((resolve) => {
-    server = app.listen(0, '127.0.0.1', resolve);
+    // Bind on all interfaces, matching the production server, so the same code
+    // path is exercised in the container as it is locally.
+    server = app.listen(0, '0.0.0.0', resolve);
   });
   baseUrl = `http://127.0.0.1:${server.address().port}`;
 });
